@@ -1,3 +1,5 @@
+import React from 'react';
+
 function PasswordInput() {
     function handleChange() {
         console.log("Entering password...");
