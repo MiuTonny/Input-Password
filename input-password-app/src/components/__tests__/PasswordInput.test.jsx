@@ -1,16 +1,18 @@
 import React from 'react';
-import { test, expect } from 'vitest';
+import { test, expect, beforeAll } from 'vitest';
 import { render, fireEvent, screen } from '@testing-library/react';
 import PasswordInput from '../PasswordInput';
 
+beforeAll(async () => {
+  if (typeof document === 'undefined') {
+    const { JSDOM } = await import('jsdom');
+    const dom = new JSDOM('<!doctype html><html><body></body></html>');
 
-if (typeof document === 'undefined') {
-  const { JSDOM } = await import('jsdom');
-  const { window } = new JSDOM('<!doctype html><html><body></body></html>');
-  globalThis.window = window;
-  globalThis.document = window.document;
-  globalThis.navigator = window.navigator;
-}
+    globalThis.window = dom.window;
+    globalThis.document = dom.window.document;
+    globalThis.navigator = dom.window.navigator;
+  }
+});
 
 test('displays feedback when typing in password input', () => {
   render(<PasswordInput />);
