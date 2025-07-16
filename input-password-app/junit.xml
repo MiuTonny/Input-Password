@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.017664728">
-    <testsuite name="src/components/__tests__/PasswordInput.test.jsx" timestamp="2025-07-16T20:44:22.921Z" hostname="tony" tests="1" failures="0" errors="0" skipped="0" time="0.017664728">
-        <testcase classname="src/components/__tests__/PasswordInput.test.jsx" name="calls handleChange on input change" time="0.01685223">
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.017738434">
+    <testsuite name="src/components/__tests__/PasswordInput.test.jsx" timestamp="2025-07-16T20:49:15.707Z" hostname="tony" tests="1" failures="0" errors="0" skipped="0" time="0.017738434">
+        <testcase classname="src/components/__tests__/PasswordInput.test.jsx" name="calls handleChange on input change" time="0.016945139">
             <system-out>
 Entering password...
 
