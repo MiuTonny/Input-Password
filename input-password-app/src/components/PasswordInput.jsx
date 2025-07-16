@@ -13,11 +13,11 @@ function PasswordInput() {
         type="password"
         placeholder="Enter password"
         onChange={handleChange}
-        data-testid="password-input"
       />
-      {entered && <p data-testid="status">Password being entered...</p>}
+      {entered && <p>Password being entered...</p>}
     </>
   );
 }
 
 export default PasswordInput;
+

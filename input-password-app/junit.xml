@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.021101237">
-    <testsuite name="src/components/__tests__/PasswordInput.test.jsx" timestamp="2025-07-16T21:23:31.036Z" hostname="tony" tests="1" failures="0" errors="0" skipped="0" time="0.021101237">
-        <testcase classname="src/components/__tests__/PasswordInput.test.jsx" name="displays feedback when typing in password input" time="0.020290462">
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.019356936">
+    <testsuite name="src/components/__tests__/PasswordInput.test.jsx" timestamp="2025-07-16T21:26:20.054Z" hostname="tony" tests="1" failures="0" errors="0" skipped="0" time="0.019356936">
+        <testcase classname="src/components/__tests__/PasswordInput.test.jsx" name="displays feedback when typing in password input" time="0.018545855">
         </testcase>
     </testsuite>
 </testsuites>
