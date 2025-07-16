@@ -3,7 +3,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import PasswordInput from '../PasswordInput';
 
-
+// Ensure jsdom window + document exist
 if (typeof document === 'undefined') {
   const { JSDOM } = await import('jsdom');
   const { window } = new JSDOM('<!doctype html><html><body></body></html>');
@@ -13,12 +13,12 @@ if (typeof document === 'undefined') {
 }
 
 test('calls handleChange on input change', () => {
-  const consoleSpy = vi.spyOn(console, 'log');
+  const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {}); // spy before render
 
   const { container } = render(<PasswordInput />);
   const input = container.querySelector('input[type="password"]');
 
-  fireEvent.change(input, { target: { value: '123' } });
+  fireEvent.change(input, { target: { value: 'abc123' } });
 
   expect(consoleSpy).toHaveBeenCalledWith("Entering password...");
 });
