@@ -1,7 +1,16 @@
+/// <reference types="vitest" />
 import React from 'react';
 import { test, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import PasswordInput from '../PasswordInput';
+
+// 🛠 Fallback: create a global document if it's missing
+if (typeof document === 'undefined') {
+  const { JSDOM } = await import('jsdom');
+  globalThis.window = new JSDOM('').window;
+  globalThis.document = window.document;
+  globalThis.navigator = window.navigator;
+}
 
 test('calls handleChange on input change', () => {
   const consoleSpy = vi.spyOn(console, 'log');
